@@ -1,17 +1,17 @@
 DownloadHelper
 ==============
-project: DownloaderHelper
-Author: Harvey Hu
-URL: https://github.com/HarveyHu/DownloadHelper
-License: the MIT license.
+project: DownloaderHelper<br/>
+Author: Harvey Hu<br/>
+URL: https://github.com/HarveyHu/DownloadHelper<br/>
+License: the MIT license.<br/>
 
 
-Objective-C class to download a file to temp folder in your App's sandbox.
+Objective-C class to download a file to temp folder in your App's sandbox.<br/><br/>
 
-You should import URLDownloadHelper.h to your project.
-To download a file from the internet to your sandbox of your App by the following code:
+You should import URLDownloadHelper.h to your project.<br/>
+To download a file from the internet to your sandbox of your App by the following code:<br/>
 
-URLDownloadHelper* downloader = [[URLDownloadHelper alloc] initWithSingleMode];
-[downloader downloadWithUrl: #YourTargetURL];
+URLDownloadHelper* downloader = [[URLDownloadHelper alloc] initWithSingleMode];<br/>
+[downloader downloadWithUrl: #YourTargetURL];<br/><br/>
 
 PS.This class can only valid under iOS 5.0 and higher.
