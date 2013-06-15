@@ -2,6 +2,7 @@
 //  URLDownloadHelper.h
 //  VideoPlayback
 //
+//  Licensed under the MIT license
 //  Created by HarveyHu on 13/6/10.
 //
 //
