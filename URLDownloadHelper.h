@@ -11,7 +11,7 @@
 #import <Foundation/Foundation.h>
 
 @interface URLDownloadHelper : NSObject<NSURLConnectionDownloadDelegate>{
-    NSURLConnection* connetction;
+    
 }
 
 +(URLDownloadHelper*)initWithSingletonMode;
