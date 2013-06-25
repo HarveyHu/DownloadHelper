@@ -53,9 +53,8 @@
     NSURL *url = [NSURL URLWithString:targetURL];
     //設定網站連線時間上限，以及cache方式（這裡是會先用cache檔，如果沒有再從網址去下載）
     NSURLRequest *request = [NSURLRequest requestWithURL:url cachePolicy:NSURLRequestReturnCacheDataElseLoad timeoutInterval:20.f];
-    connetction = [NSURLConnection connectionWithRequest:request delegate:self];
+    [NSURLConnection connectionWithRequest:request delegate:self];
     
-    [request release];
 }
 
 @end
