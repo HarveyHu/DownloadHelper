@@ -27,6 +27,10 @@ static URLDownloadHelper* singleton = nil;
     return isFinishedFlag;
 }
 
+- (NSString*)getFilePath{
+    return filePath;
+}
+
 //文字反轉
 -(NSString *)stringByReversed:(NSString*)sourceString{
     NSUInteger i = 0;
@@ -62,7 +66,7 @@ static URLDownloadHelper* singleton = nil;
     //取得文件目錄
     NSString* documentsDir = [NSSearchPathForDirectoriesInDomains(NSDocumentationDirectory, NSUserDomainMask, YES) objectAtIndex:0];
     //完整檔案路徑
-    NSString* filePath = [documentsDir stringByAppendingString:fileName];
+    filePath = [documentsDir stringByAppendingString:fileName];
     if (![[NSFileManager defaultManager] fileExistsAtPath:filePath])
     {
         NSLog(@"檔案不存在本機,開始下載");
@@ -81,5 +85,4 @@ static URLDownloadHelper* singleton = nil;
         isFinishedFlag = YES;
     }
 }
-
 @end
