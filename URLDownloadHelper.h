@@ -12,9 +12,11 @@
 
 @interface URLDownloadHelper : NSObject{
     BOOL isFinishedFlag;
+    NSString* filePath;
 }
 
 +(URLDownloadHelper*)initWithSingletonMode;
 - (void)downloadWithUrl:(NSString*)targetURL;
 - (BOOL)isFinished;
+- (NSString*)getFilePath;
 @end
