@@ -10,10 +10,11 @@
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
 
-@interface URLDownloadHelper : NSObject<NSURLConnectionDownloadDelegate>{
-    
+@interface URLDownloadHelper : NSObject{
+    BOOL isFinishedFlag;
 }
 
 +(URLDownloadHelper*)initWithSingletonMode;
 - (void)downloadWithUrl:(NSString*)targetURL;
+- (BOOL)isFinished;
 @end
