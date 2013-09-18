@@ -2,14 +2,12 @@
 //  URLDownloadHelper.h
 //  VideoPlayback
 //
-//  Licensed under the MIT license
 //  Created by HarveyHu on 13/6/10.
-//
+//  Licensed under the MIT license
 //
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-
 //宣告protocal
 @protocol URLDownloadHelperDelegate <NSObject>
 @optional
@@ -17,16 +15,17 @@
 @end
 
 @interface URLDownloadHelper : NSObject{
-    BOOL isFinishedFlag;
-    NSString* filePath;
+    BOOL _isFinishedFlag;
+    
 }
 
 @property (nonatomic, assign) id<URLDownloadHelperDelegate> delegate;
-- (void)callback;
 
-+(URLDownloadHelper*)initWithSingletonMode;
-- (void)downloadWithUrl:(NSString*)targetURL;
-- (BOOL) isFileExistingInDocumentFolder:(NSString*)fileName;
-- (BOOL)isFinished;
-- (NSString*)getFilePath;
+
+
++(URLDownloadHelper*)sharedInstance;
+- (void) downloadWithUrl:(NSString*)targetURL;
+- (BOOL) isFinished;
+- (NSString*) getFilePath;
+- (NSString*) getFileName;
 @end
